@@ -163,14 +163,14 @@ section.form > .content > .left .bottom-text {
 }
 section.form > .content > .left .action .icon-wrapper,
 section.form > .content > .left .bottom-text .icon-wrapper {
-    width: auto;
+    width: 3rem;
     height: 3rem;
 }
 section.form > .content > .left .action .icon-wrapper img,
 section.form > .content > .left .bottom-text .icon-wrapper img {
     width: 100%;
     height: 100%;
-    min-height: 3rem;
+    min-width: 3rem;
 }
 section.form > .content > .left .tooltip {
     color: #FFE500;
@@ -496,7 +496,7 @@ section.form .content .right {
         height: 2rem;
     }
     section.form > .content > .left .action .icon-wrapper img, section.form > .content > .left .bottom-text .icon-wrapper img {
-        min-height: 2rem;
+        min-width: 2rem;
     }
 }
 @media screen and (max-width: 420px) {
