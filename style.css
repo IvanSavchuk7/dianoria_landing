@@ -1,0 +1,489 @@
+@font-face {
+    font-family: 'Benzin Family';
+    src: local('Benzin Family Bold'), local('Benzin-Family-Bold'),
+    url('assets/fonts/Benzin-Bold.woff2') format('woff2'),
+    url('assets/fonts/Benzin-Bold.woff') format('woff'),
+    url('assets/fonts/Benzin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html {
+    font-size: 20px;
+    background: #181818;
+    scroll-behavior: smooth;
+}
+body {
+    transition: opacity 0.3s ease;
+}
+body.loading {
+    pointer-events: none;
+    overflow: hidden;
+}
+html main {
+    overflow: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 120%;
+    text-decoration: none;
+    border: none;
+    font-family: 'Benzin Family', sans-serif;
+}
+main > section.hero {
+    background-image:
+    url("assets/images/bg-noise.png"),
+    url("assets/images/expert-img.png"),
+    url("assets/images/gpt-icon.png"),
+    url("assets/images/paint-vector.png"),
+    url("assets/images/splinter-vector.png"),
+    url("assets/images/graffiti-bg.png");
+    background-size: 100% 100%, auto 85%, 23rem 18rem, auto 8rem, auto 12rem, 75% 75%;
+    background-position: center, bottom right, calc(100% + 3rem) -1rem, top left, bottom left, bottom right;
+    background-repeat: no-repeat;
+    padding: 6rem 4rem 6rem 4rem;
+}
+section.hero > .title {
+    display: flex;
+    flex-direction: column;
+}
+section.hero > .title > div {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+section.hero > .title > div:last-child {
+    color: #FFE500;
+}
+section.hero > .content * {
+    font-family: Inter, sans-serif;
+}
+section.hero > .content {
+    padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+    background: #232323;
+    width: fit-content;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+section.hero > .content > .description {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+section.hero > .content > .description .text {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+section.hero > .content > .description > .img-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+section.hero > .content > .description > .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    min-width: 3.5rem;
+}
+section.hero > .content > .list-wrapper {
+    margin: 1rem 3rem 0 0;
+    background: #FFE500;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+section.hero > .content > .list-wrapper * {
+    color: #181818;
+    font-size: 1.1rem;
+}
+section.hero > .content > .list-wrapper > .text {
+    font-weight: bold;
+}
+section.hero > .content > .list .item .text {
+    font-weight: 700;
+}
+section.hero > .content .list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+section.hero > .content .list .item {
+    display: flex;
+    gap: .5rem;
+}
+section.hero > .content .list .item .icon {
+    width: .8rem;
+    height: .8rem;
+}
+section.hero > .content .list .item .icon img {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+}
+main > section.form {
+    background-image:
+            url("assets/images/bg-noise.png"),
+            url("assets/images/splinter-vector-2.png"),
+            url("assets/images/graffiti-bg.png"),
+            url("assets/images/splinter-vector-rotated.png"),
+            url("assets/images/gpt-icon.png"),
+            url("assets/images/paint-vector-2.png");
+    background-size: 0, 100% auto, 100% 75%, auto 15rem, 16rem 13rem, auto 8rem;
+    background-position: center, bottom center, bottom center, 0 0, 50% 0, top right;
+    background-repeat: no-repeat;
+    padding: 12rem 4rem 8rem 4rem;
+}
+
+section.hero .mobile-img-wrapper {
+    display: none;
+}
+
+section.form > .content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+section.form > .content > .left {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section.form > .content > .left .tooltip,
+section.form > .content > .left .offer,
+section.form > .content > .left .action > .text {
+    text-transform: uppercase;
+}
+section.form > .content > .left .action,
+section.form > .content > .left .bottom-text {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+section.form > .content > .left .action .icon-wrapper,
+section.form > .content > .left .bottom-text .icon-wrapper {
+    width: auto;
+    height: 3rem;
+}
+section.form > .content > .left .action .icon-wrapper img,
+section.form > .content > .left .bottom-text .icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    min-height: 3rem;
+}
+section.form > .content > .left .tooltip {
+    color: #FFE500;
+    font-size: 1.4rem;
+}
+section.form > .content > .left .offer {
+    font-size: 1.65rem;
+}
+section.form > .content > .left .action {
+    padding: 1rem;
+    background: #FFE500;
+    border-radius: 1rem;
+    width: fit-content;
+}
+section.form > .content > .left .action .text {
+    color: #181818;
+    font-size: 1.25rem;
+}
+section.form > .content > .left .bottom-text {
+    background: #232323;
+    padding: 1.5rem 1rem;
+    width: fit-content;
+    border-radius: 1rem;
+}
+section.form > .content > .left .bottom-text .text {
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+section.form .content .right {
+    --bg: #0e0e0e;
+    --card: rgba(0,0,0,0.55);
+    --accent: #FFE500;
+    --accent-strong: #ffd400;
+    --input-bg: #ffffff;
+    --input-border: #e6e6e6;
+    --input-focus: #24b58c;
+    --text: #111;
+    --label: #FFE500;
+    --placeholder: #9aa0a6;
+    font-family: Inter, sans-serif;
+    flex: 3;
+}
+.right * {
+    font-family: Inter, sans-serif;
+}
+.lead-form {
+    width: min(720px, 100%);
+    margin: 0 auto;
+    display: grid;
+    gap: 18px;
+    padding: 0;
+}
+
+.form-field {
+    display: grid;
+    gap: 8px;
+}
+
+.form-label {
+    color: var(--label);
+    font-weight: 800;
+    letter-spacing: .2px;
+    font-size: .9rem;
+    line-height: 1.2;
+}
+.form-label b { color: #ffb700; font-weight: 900; }
+
+/* Inputs */
+.lead-form input[type="text"],
+.lead-form input[type="tel"],
+.lead-form input[type="email"],
+.lead-form textarea {
+    width: 100%;
+    background: var(--input-bg);
+    color: var(--text);
+    border: 1px solid var(--input-border);
+    border-left: 4px solid transparent; /* decorative left accent (like the ref edge) */
+    padding: .7rem .8rem;
+    border-radius: 2px;
+    outline: none;
+    font-size: .9rem;
+    transition: border-color .18s ease, box-shadow .18s ease, border-left-color .18s ease;
+}
+.lead-form textarea {
+    min-height: 104px; /* Instagram field looks taller in your screenshot */
+    resize: vertical;
+}
+.lead-form input::placeholder,
+.lead-form textarea::placeholder { color: var(--placeholder); }
+
+.lead-form input:focus,
+.lead-form textarea:focus {
+    border-color: #cfd6dd;
+    border-left-width: 5px;
+    border-left-color: var(--input-focus);
+    box-shadow: 0 0 0 3px rgba(36,181,140,0.15);
+}
+
+.submit-btn {
+    appearance: none;
+    border: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+    background: var(--accent);
+    color: #1b1b1b;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 18px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: .2px;
+    box-shadow: 0 6px 20px rgba(255, 225, 99, 0.35);
+    animation: pulse-bright 2.5s ease-in-out infinite;
+    transition: transform .08s ease;
+}
+.submit-btn img {
+    width: 1rem;
+    height: 1rem;
+    min-width: 1rem;
+}
+.submit-btn:hover { background: var(--accent-strong); box-shadow: 0 8px 26px rgba(255, 212, 0, 0.45); }
+.submit-btn:active { transform: translateY(1px); }
+
+@keyframes pulse-bright {
+    0% {
+        background: #e6d96a;         /* dull yellow */
+        transform: scale(1);
+        box-shadow: 0 4px 14px rgba(255, 225, 99, 0.15);
+    }
+    50% {
+        background: #FFE500;         /* bright yellow */
+        transform: scale(1.05);      /* slightly bigger */
+        box-shadow: 0 8px 28px rgba(255, 229, 0, 0.45);
+    }
+    100% {
+        background: #e6d96a;         /* back to dull yellow */
+        transform: scale(1);
+        box-shadow: 0 4px 14px rgba(255, 225, 99, 0.15);
+    }
+}
+
+
+@media screen and (min-width: 2560px) and (max-width: 3840px) {
+    html {
+        font-size: 28px;
+    }
+    main > section.form, main > section.hero {
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+}
+@media screen and (min-width: 1921px) and (max-width: 2559px) {
+    html {
+        font-size: 24px;
+    }
+    main > section.form, main > section.hero {
+        padding-left: 9rem;
+        padding-right: 9rem;
+    }
+}
+@media screen and (min-width: 1680px) and (max-width: 1920px) {
+    html {
+        font-size: 22px;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1367px) {
+    html {
+        font-size: 16px;
+    }
+    section.form > .content {
+        gap: 1rem;
+    }
+    section.form > .content > .left .offer {
+        font-size: 1.5rem;
+    }
+    section.form > .content > .left .action .text {
+        font-size: 1.2rem;
+    }
+    .lead-form textarea {
+        min-height: 85px;
+        resize: vertical;
+    }
+}
+@media screen and (max-width: 1023px) {
+    html {
+        font-size: 16px;
+    }
+    main > section.hero {
+        background-image:
+                url("assets/images/bg-noise.png"),
+                url("assets/images/gpt-icon.png"),
+                url("assets/images/paint-vector.png"),
+                url("assets/images/splinter-vector.png"),
+                url("assets/images/graffiti-bg.png");
+        background-size: 100% 100%, 23rem 18rem, auto 8rem, auto 12rem, 200% 50%;
+        background-position: center, calc(100% + 3rem) -1rem, top left, bottom left, 50% calc(100% - 6rem);
+        background-repeat: no-repeat;
+        padding: 10rem 0 0 0;
+    }
+    main > section.hero .title {
+        text-align: center;
+    }
+    main > section.hero .content {
+        margin: 3rem auto 0 auto;
+    }
+    section.hero .mobile-img-wrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -6rem;
+    }
+    section.hero .mobile-img-wrapper img {
+        width: 80%;
+        height: auto;
+    }
+    section.hero > .content > .description .text {
+        font-size: 1.5rem;
+    }
+    section.hero > .content > .list-wrapper * {
+        font-size: 1.35rem;
+    }
+    section.hero > .content .list .item .icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    section.hero > .content .list {
+        gap: 1rem;
+    }
+    section.form > .content {
+        flex-direction: column;
+    }
+    section.form .content .right {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+@media screen and (max-width: 680px) {
+    html {
+        font-size: 14px;
+    }
+    section.hero > .content {
+        padding: 2rem;
+    }
+    section.hero > .content > .list-wrapper {
+        margin: 1.5rem 0 0 0;
+    }
+    section.hero > .title > div {
+        font-size: 2.2rem;
+    }
+    section.hero > .content > .description .text br {
+        display: none;
+    }
+    main > section.hero {
+        background-size: 200% 200%, 23rem 18rem, auto 8rem, auto 8rem, 200% 50%;
+    }
+
+}
+@media screen and (max-width: 580px) {
+    section.hero > .title > div {
+        padding: 0 1rem;
+    }
+    section.form .content .right {
+        max-width: 400px;
+    }
+    main > section.form {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    section.form > .content > .left .offer {
+        font-size: 1.3rem;
+    }
+    section.form > .content > .left .action .text {
+        font-size: 1.1rem;
+    }
+    section.form > .content > .left .bottom-text .text {
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+    section.hero > .content > .description .text {
+        font-size: 1.3rem;
+    }
+    section.hero > .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    section.hero > .content > .description .text br {
+        display: none;
+    }
+    main > section.form {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+@media screen and (max-width: 420px) {
+    html {
+        font-size: 11px;
+    }
+    main > section.hero {
+        background-size: 100% 100%, 18rem 13rem, auto 6rem, auto 8rem, 200% 50%;
+    }
+    section.hero .mobile-img-wrapper {
+        margin-top: -4rem;
+    }
+}
+@media screen and (max-width: 375px) {
+
+}
