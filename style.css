@@ -248,7 +248,7 @@ section.form .content .right {
     background: var(--input-bg);
     color: var(--text);
     border: 1px solid var(--input-border);
-    border-left: 4px solid transparent; /* decorative left accent (like the ref edge) */
+    border-left: 4px solid transparent;
     padding: .7rem .8rem;
     border-radius: 2px;
     outline: none;
@@ -256,7 +256,7 @@ section.form .content .right {
     transition: border-color .18s ease, box-shadow .18s ease, border-left-color .18s ease;
 }
 .lead-form textarea {
-    min-height: 104px; /* Instagram field looks taller in your screenshot */
+    min-height: 104px;
     resize: vertical;
 }
 .lead-form input::placeholder,
@@ -440,17 +440,22 @@ section.form .content .right {
     section.hero > .title > div {
         font-size: 2.2rem;
     }
-    section.hero > .content > .description .text br {
+    section.hero > .content > .description .text br,
+    section.form > .content > .left .action .text br,
+    section.form > .content > .left .bottom-text .text br {
         display: none;
     }
     main > section.hero {
-        background-size: 200% 200%, 23rem 18rem, auto 8rem, auto 8rem, 200% 50%;
+        background-size: 100% 100%, 23rem 18rem, auto 8rem, auto 8rem, 200% 50%;
     }
     .form-label {
         font-size: 1.1rem;
     }
     .submit-btn {
         font-size: 1.25rem;
+    }
+    main > section.form {
+        background-size: 0, 125% auto, 200% 75%, auto 15rem, 16rem 13rem, auto 8rem;
     }
 }
 @media screen and (max-width: 580px) {
@@ -494,6 +499,7 @@ section.form .content .right {
     }
     section.form > .content > .left .action .icon-wrapper, section.form > .content > .left .bottom-text .icon-wrapper {
         height: 2rem;
+        width: 2rem;
     }
     section.form > .content > .left .action .icon-wrapper img, section.form > .content > .left .bottom-text .icon-wrapper img {
         min-width: 2rem;
